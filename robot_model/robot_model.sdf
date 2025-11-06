@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<sdf version="1.10">
+  <model name='vehicle_blue' canonical_link='chassis'>
+    <!-- Убрал pose relative_to, так как он будет задаваться при включении -->
+    
+    <!--chassis-->    
+    <link name='chassis'>
+      <pose relative_to='__model__'>0 0 0.0235 0 0 0</pose>
+      <inertial>
+        <mass>1.14395</mass>
+        <inertia>
+          <ixx>0.095329</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.381317</iyy>
+          <iyz>0</iyz>
+          <izz>0.476646</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <mesh>
+            <uri>model://robot_model/robot_frame.gltf</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <box>
+            <size>0.425 0.685 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+    <!--left wheel-->    
+    <link name='left_wheel'>
+      <pose relative_to="chassis">0.2075 0 0.039 -1.5707 0 1.5707</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.043333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.043333</iyy>
+          <iyz>0</iyz>
+          <izz>0.08</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <cylinder>
+            <radius>0.0625</radius>
+            <length>0.03</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>1.0 0.0 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.0625</radius>
+            <length>0.03</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <!--right wheel-->
+    <link name='right_wheel'>
+      <pose relative_to="chassis">-0.2075 0 0.039 -1.5707 0 1.5707</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.043333</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.043333</iyy>
+          <iyz>0</iyz>
+          <izz>0.08</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <cylinder>
+            <radius>0.0625</radius>
+            <length>0.03</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1</ambient>
+          <diffuse>1.0 0.0 0.0 1</diffuse>
+          <specular>1.0 0.0 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.0625</radius>
+            <length>0.03</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+     <!-- ===== CASTER WHEELS ===== -->
+
+    <!--caster frame front left-->
+    <frame name="caster_frame_fl" attached_to='chassis'>
+      <pose>0.1385 -0.2707 -0.0005 0 0 0</pose>
+    </frame>
+
+    <!--caster frame front right-->
+    <frame name="caster_frame_fr" attached_to='chassis'>
+      <pose>-0.1385 -0.2707 -0.0005 0 0 0</pose>
+    </frame>
+
+    <!--caster frame back left-->
+    <frame name="caster_frame_bl" attached_to='chassis'>
+      <pose>0.1393 0.2709 -0.0005 0 0 0</pose>
+    </frame>
+
+    <!--caster frame back right-->
+    <frame name="caster_frame_br" attached_to='chassis'>
+      <pose>-0.1393 0.2709 -0.0005 0 0 0</pose>
+    </frame>
+
+    <!--caster wheel front left-->
+    <link name='caster_fl'>
+      <pose relative_to='caster_frame_fl'/>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.016</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.016</iyy>
+          <iyz>0</iyz>
+          <izz>0.016</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 1 0.0 1</ambient>
+          <diffuse>0.0 1 0.0 1</diffuse>
+          <specular>0.0 1 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+
+    <!--caster wheel front right-->
+    <link name='caster_fr'>
+      <pose relative_to='caster_frame_fr'/>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.016</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.016</iyy>
+          <iyz>0</iyz>
+          <izz>0.016</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 1 0.0 1</ambient>
+          <diffuse>0.0 1 0.0 1</diffuse>
+          <specular>0.0 1 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+
+    <!--caster wheel back left-->
+    <link name='caster_bl'>
+      <pose relative_to='caster_frame_bl'/>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.016</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.016</iyy>
+          <iyz>0</iyz>
+          <izz>0.016</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 1 0.0 1</ambient>
+          <diffuse>0.0 1 0.0 1</diffuse>
+          <specular>0.0 1 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>
+
+    <!--caster wheel back right-->
+    <link name='caster_br'>
+      <pose relative_to='caster_frame_br'/>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.016</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.016</iyy>
+          <iyz>0</iyz>
+          <izz>0.016</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 1 0.0 1</ambient>
+          <diffuse>0.0 1 0.0 1</diffuse>
+          <specular>0.0 1 0.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <sphere>
+            <radius>0.02</radius>
+          </sphere>
+        </geometry>
+      </collision>
+    </link>   
+
+    <!-- ===== ШАРНИРЫ ===== -->
+
+    <!--left wheel joint-->
+    <joint name='left_wheel_joint' type='revolute'>
+      <pose relative_to='left_wheel'/>
+      <parent>chassis</parent>
+      <child>left_wheel</child>
+      <axis>
+        <xyz expressed_in='__model__'>1 0 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <!--right wheel joint-->
+    <joint name='right_wheel_joint' type='revolute'>
+      <pose relative_to='right_wheel'/>
+      <parent>chassis</parent>
+      <child>right_wheel</child>
+      <axis>
+        <xyz expressed_in='__model__'>1 0 0</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <!--caster wheel joint front left-->
+    <joint name='caster_wheel_fl' type='ball'>
+      <parent>chassis</parent>
+      <child>caster_fl</child>
+    </joint>
+
+    <!--caster wheel joint front right-->
+    <joint name='caster_wheel_fr' type='ball'>
+      <parent>chassis</parent>
+      <child>caster_fr</child>
+    </joint>
+
+    <!--caster wheel joint back left-->
+    <joint name='caster_wheel_bl' type='ball'>
+      <parent>chassis</parent>
+      <child>caster_bl</child>
+    </joint>
+
+    <!--caster wheel joint back right-->
+    <joint name='caster_wheel_br' type='ball'>
+      <parent>chassis</parent>
+      <child>caster_br</child>
+    </joint>
+
+    <plugin
+        filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>0.415</wheel_separation>
+        <wheel_radius>0.0625</wheel_radius>
+        <odom_publish_frequency>1</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+    </plugin>
+
+    <!-- Moving Forward-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">87</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/cmd_vel">
+            linear: {x: 0.5}, angular: {z: 0.0}
+        </output>
+    </plugin>
+
+    <!-- Moving Backward-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">83</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/cmd_vel">
+            linear: {x: -0.5}, angular: {z: 0.0}
+        </output>
+    </plugin>
+
+    <!-- Moving Left-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">65</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/cmd_vel">
+            linear: {x: 0.0}, angular: {z: 0.5}
+        </output>
+    </plugin>
+
+    <!-- Moving Right-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">68</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/cmd_vel">
+            linear: {x: 0.0}, angular: {z: -0.5}
+        </output>
+    </plugin>
+
+  </model>
+</sdf>

@@ -1,14 +1,8 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v1.4.40",
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
         "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_texture_transform"
-    ],
-    "extensionsRequired" : [
-        "KHR_texture_transform"
-    ],
     "scene" : 0,
     "scenes" : [
         {
@@ -27,55 +21,16 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "Aluminium3_2K",
+            "name" : "MetalPlates2_2K",
             "normalTexture" : {
-                "extensions" : {
-                    "KHR_texture_transform" : {
-                        "offset" : [
-                            0,
-                            -3
-                        ],
-                        "scale" : [
-                            4,
-                            4
-                        ]
-                    }
-                },
-                "index" : 0,
-                "texCoord" : 0
+                "index" : 0
             },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "extensions" : {
-                        "KHR_texture_transform" : {
-                            "offset" : [
-                                0,
-                                -3
-                            ],
-                            "scale" : [
-                                4,
-                                4
-                            ]
-                        }
-                    },
-                    "index" : 1,
-                    "texCoord" : 0
+                    "index" : 1
                 },
                 "metallicRoughnessTexture" : {
-                    "extensions" : {
-                        "KHR_texture_transform" : {
-                            "offset" : [
-                                0,
-                                -3
-                            ],
-                            "scale" : [
-                                4,
-                                4
-                            ]
-                        }
-                    },
-                    "index" : 2,
-                    "texCoord" : 0
+                    "index" : 2
                 }
             }
         }
@@ -188,7 +143,7 @@
     "samplers" : [
         {
             "magFilter" : 9729,
-            "minFilter" : 9986
+            "minFilter" : 9987
         }
     ],
     "buffers" : [

@@ -20,10 +20,24 @@
       <visual name='visual'>
         <geometry>
           <mesh>
-            <uri>model://robot_model/robot_frame.gltf</uri>
+            <uri>file://robot_model/robot_frame.gltf</uri>
             <scale>1 1 1</scale>
           </mesh>
-        </geometry>
+        </geometry> 
+        <material>
+          <ambient>1.0 1.0 1.0</ambient>
+          <diffuse>1.0 1.0 1.0</diffuse>
+          <specular>0.04 0.04 0.04</specular>
+          <emissive>0.1 0.1 0.1</emissive>
+          <pbr>
+            <metal>
+              <albedo_map>file://robot_model/textures/Metal011_2K-JPG_Color.jpg</albedo_map>
+              <roughness_map>file://robot_model/textures/Metal011_2K-JPG_Roughness.jpg</roughness_map>
+              <metalness_map>file://robot_model/textures/Metal011_2K-JPG_Metalness.jpg</metalness_map>
+              <normal_map>file://robot_model/textures/Metal011_2K-JPG_NormalGL.jpg</normal_map>
+            </metal>
+          </pbr>
+        </material>
       </visual>
       <collision name='collision'>
         <geometry>

@@ -1,0 +1,15 @@
+# Blender 4.2.16 LTS MTL File: 'AMR100_body.blend'
+# www.blender.org
+
+newmtl Aluminium_Plastic_4K
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Textures\\Aluminium_Plastic_4K_color.png
+map_Ns Textures\\Aluminium_Plastic_4K_roughness.png
+map_refl Textures\\Aluminium_Plastic_4K_metallic.png
+map_Ks Textures\\Aluminium_Plastic_4K_specular.png
+map_Kn Textures\\Aluminium_Plastic_4K_normal.png

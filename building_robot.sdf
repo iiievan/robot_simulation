@@ -37,7 +37,7 @@
               <background_color>0.8 0.8 0.8</background_color>
               <camera_pose>-6 0 6 0 0.5 0</camera_pose>
               <camera_clip>
-                <near>0.1</near>
+                <near>0.01</near>
                 <far>25000</far>
               </camera_clip>
             </plugin>
@@ -106,6 +106,19 @@
 
             <!-- Key Publisher-->
             <plugin filename="KeyPublisher" name="Key publisher">
+            </plugin>
+
+            <!-- Visualaize frame's and joint's -->
+            <plugin filename="TransformControl" name="Transform Control">
+              <gz-gui>
+                <property key="state" type="string">docked</property>
+              </gz-gui>
+            </plugin>
+            
+            <plugin filename="ComponentInspector" name="Component Inspector">
+              <gz-gui>
+                <property key="state" type="string">docked</property>
+              </gz-gui>
             </plugin>
 
         </gui>

@@ -93,15 +93,10 @@
       <mass>0.30000</mass>
     </inertial>
     <visual name="Drive_wheel_L">
-      <material>
-        <diffuse>0.80000 0.80000 0.80000 1.00000</diffuse>
-        <specular>0.80000 0.80000 0.80000 1.00000</specular>
-        <emissive>1.00000 1.00000 1.00000 1.00000</emissive>
-      </material>
       <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/Cylinder.004.obj</uri>
+          <uri>file://model/meshes/drive_wheel.obj</uri>
           <scale>1.00000 1.00000 1.00000</scale>
         </mesh>
       </geometry>
@@ -134,15 +129,10 @@
       <mass>0.30000</mass>
     </inertial>
     <visual name="Drive_wheel_R">
-      <material>
-        <diffuse>0.80000 0.80000 0.80000 1.00000</diffuse>
-        <specular>0.80000 0.80000 0.80000 1.00000</specular>
-        <emissive>1.00000 1.00000 1.00000 1.00000</emissive>
-      </material>
       <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/Cylinder.005.obj</uri>
+          <uri>file://model/meshes/drive_wheel.obj</uri>
           <scale>1.00000 1.00000 1.00000</scale>
         </mesh>
       </geometry>

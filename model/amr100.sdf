@@ -1045,47 +1045,47 @@
       <topic>cmd_vel</topic>
   </plugin>
 
-    <!-- Moving Forward-->
+     <!-- Moving Forward 'W'-->
     <plugin filename="gz-sim-triggered-publisher-system"
             name="gz::sim::systems::TriggeredPublisher">
         <input type="gz.msgs.Int32" topic="/keyboard/keypress">
             <match field="data">87</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {y: 0.0}, angular: {z: -0.5}
+            linear: {x: 0.0, y: 3.5, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 
-    <!-- Moving Backward-->
+    <!-- Moving Backward 'D'-->
     <plugin filename="gz-sim-triggered-publisher-system"
             name="gz::sim::systems::TriggeredPublisher">
         <input type="gz.msgs.Int32" topic="/keyboard/keypress">
             <match field="data">83</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {y: 0.0}, angular: {z: 0.5}
+            linear: {x: 0.0, y: -3.5, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 
-    <!-- Moving Left-->
+    <!-- Moving Left 'A'-->
     <plugin filename="gz-sim-triggered-publisher-system"
             name="gz::sim::systems::TriggeredPublisher">
         <input type="gz.msgs.Int32" topic="/keyboard/keypress">
             <match field="data">65</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: -0.5}, angular: {z: 0.0}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.07}
         </output>
     </plugin>
 
-    <!-- Moving Right-->
+    <!-- Moving Right 'D'-->
     <plugin filename="gz-sim-triggered-publisher-system"
             name="gz::sim::systems::TriggeredPublisher">
         <input type="gz.msgs.Int32" topic="/keyboard/keypress">
             <match field="data">68</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.5}, angular: {z: 0.0}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.07}
         </output>
     </plugin>
 

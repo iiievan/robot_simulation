@@ -1,40 +1,8 @@
 <?xml version="1.0"?>
-<sdf version="1.10">
+<sdf version="1.12">
 <model name="amr100">
 
-  <joint name="left_wheel_link_joint" type="revolute">
-    <pose>0.20749 0.001 0.062 -0.00000 1.57080 0.00000</pose>
-    <parent>root</parent>
-    <child>left_wheel_link</child>
-    <axis>
-      <limit>
-        <lower>-3.14000</lower>
-        <upper>3.14000</upper>
-        <effort>0.00000</effort>
-        <velocity>0.00000</velocity>
-      </limit>
-      <xyz>0.00000 0.00000 1.00000</xyz>
-    </axis>
-    <axis2/>
-  </joint>
-
-  <joint name="right_wheel_link_joint" type="revolute">
-    <pose>-0.20750 0.001 0.062 0.00000 -1.57080 0.00000</pose>
-    <parent>root</parent>
-    <child>right_wheel_link</child>
-    <axis>
-      <limit>
-        <lower>-3.14000</lower>
-        <upper>3.14000</upper>
-        <effort>0.00000</effort>
-        <velocity>0.00000</velocity>
-      </limit>
-      <xyz>0.00000 0.00000 1.00000</xyz>
-    </axis>
-    <axis2/>
-  </joint>
-
-  <link name="root">
+  <link name="Body_link">
     <inertial>
       <inertia>
         <ixx>1.21129</ixx>
@@ -44,11 +12,12 @@
         <iyz>-0.00435</iyz>
         <izz>1.52135</izz>
       </inertia>
-      <pose>0 0 0 0.00000 0.00000 0.00000</pose>
+      <pose>-0.000341 0.000162 0.096595 0 0 0</pose>
       <mass>30.00000</mass>
     </inertial>
+
     <visual name="Body">
-      <pose>0.00000 0.00000 0.021993 0.00000 0.00000 0.00000</pose>
+      <pose>0 0 0.021993 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/body.obj</uri>
@@ -56,6 +25,7 @@
         </mesh>
       </geometry>
     </visual>
+
     <collision name="Body_collision">
       <pose>0 0 0.021993 0 0 0</pose>
       <geometry>
@@ -64,80 +34,833 @@
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
-    </collision>
-  </link>
-
-  <link name="left_wheel_link">
-    <collision name="Drive_wheel_L_collision">
-      <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
-      <geometry>
-        <cylinder>
-          <radius>0.06250</radius>
-          <length>0.03000</length>
-        </cylinder>
-      </geometry>
       <surface>
         <contact/>
       </surface>
     </collision>
-    <inertial>
-      <inertia>
-        <ixx>0.00055</ixx>
-        <ixy>0.00000</ixy>
-        <ixz>-0.00000</ixz>
-        <iyy>0.00029</iyy>
-        <iyz>-0.00000</iyz>
-        <izz>0.00029</izz>
-      </inertia>
-      <pose>0.00000 -0.00008 0.00000 0.00000 0.00000 0.00000</pose>
-      <mass>0.30000</mass>
-    </inertial>
-    <visual name="Drive_wheel_L">
-      <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
-      <geometry>
-        <mesh>
-          <uri>file://model/meshes/drive_wheel.obj</uri>
-          <scale>1.00000 1.00000 1.00000</scale>
-        </mesh>
-      </geometry>
-    </visual>
   </link>
 
-  <link name="right_wheel_link">
-    <collision name="Drive_wheel_R_collision">
-      <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
-      <geometry>
-        <cylinder>
-          <radius>0.06250</radius>
-          <length>0.03000</length>
-        </cylinder>
-      </geometry>
-      <surface>
-        <contact/>
-      </surface>
-    </collision>
+  <!-- Drive wheels MESHES-->
+
+  <link name="Drive_wheel_R_link">
     <inertial>
       <inertia>
-        <ixx>0.00055</ixx>
+        <ixx>0.00220</ixx>
         <ixy>0.00000</ixy>
         <ixz>-0.00000</ixz>
-        <iyy>0.00029</iyy>
+        <iyy>0.00117</iyy>
         <iyz>-0.00000</iyz>
-        <izz>0.00029</izz>
+        <izz>0.00117</izz>
       </inertia>
-      <pose>0.00000 -0.00001 0.00000 0.00000 0.00000 0.00000</pose>
-      <mass>0.30000</mass>
+      <pose>0.207495 0.000992 0.062279 0 0 0</pose>
+      <mass>1.20000</mass>
     </inertial>
+
     <visual name="Drive_wheel_R">
+      <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/drive_wheel.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Drive_wheel_R_collision">
+      <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.06250</radius>
+          <length>0.03000</length>
+        </cylinder>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Drive_wheel_L_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00220</ixx>
+        <ixy>0.00000</ixy>
+        <ixz>-0.00000</ixz>
+        <iyy>0.00117</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00117</izz>
+      </inertia>
+      <pose>-0.207497 0.001064 0.062144 0 0 0</pose>
+      <mass>1.20000</mass>
+    </inertial>
+
+    <visual name="Drive_wheel_L">
       <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/drive_wheel.obj</uri>
-          <scale>1.00000 1.00000 1.00000</scale>
+          <scale>1 1 1</scale>
         </mesh>
       </geometry>
     </visual>
+
+    <collision name="Drive_wheel_L_collision">
+      <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.06250</radius>
+          <length>0.03000</length>
+        </cylinder>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
   </link>
+
+  <!-- Suspension front left MESHES-->
+
+  <link name="Suspension_cup_FL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00180</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00180</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00091</izz>
+      </inertia>`
+      <pose>-0.139317 0.270913 0.081547 0 0 0</pose>
+      <mass>0.80000</mass>
+    </inertial>
+
+    <visual name=" Suspension_cup_FL">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name=" Suspension_cup_FL_collision">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_axis_FL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00008</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00008</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.000001</izz>
+      </inertia>
+      <pose>-0.13931 0.270897 0.067311 0 0 0</pose>
+      <mass>0.10000</mass>
+    </inertial>
+
+    <visual name="Caster_axis_FL">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_axis_FL_collision">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_bar_FL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00001</ixx>
+        <ixy>0.00000</ixy>
+        <ixz>-0.00000</ixz>
+        <iyy>0.00001</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.00001</izz>
+      </inertia>
+      <pose>-0.139318 0.26279 0.015664 0 0 0</pose>
+      <mass>0.05000</mass>
+    </inertial>
+
+    <visual name="Caster_bar_FL">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_bar_FL_collision">
+      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <!-- Suspension front right MESHES-->
+
+  <link name="Suspension_cup_FR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00180</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00180</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00091</izz>
+      </inertia>`
+      <pose>0.139317 0.270913 0.081547 0 0 0</pose>
+      <mass>0.80000</mass>
+    </inertial>
+
+    <visual name="Suspension_cup_FR">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Suspension_cup_FR_collision">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+    <link name="Caster_axis_FR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00008</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00008</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.000001</izz>
+      </inertia>
+      <pose>0.13931 0.270897 0.067311 0 0 0</pose>
+      <mass>0.10000</mass>
+    </inertial>
+
+    <visual name="Caster_axis_FR">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_axis_FR_collision">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_bar_FR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00001</ixx>
+        <ixy>0.00000</ixy>
+        <ixz>-0.00000</ixz>
+        <iyy>0.00001</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.00001</izz>
+      </inertia>
+      <pose>0.139318 0.26279 0.015664 0 0 0</pose>
+      <mass>0.05000</mass>
+    </inertial>
+
+    <visual name="Caster_bar_FR">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_bar_FR_collision">
+      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <!-- Suspension back left MESHES-->
+
+  <link name="Suspension_cup_BL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00180</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00180</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00091</izz>
+      </inertia>`
+      <pose>-0.138501 -0.270709 0.081547 0 0 0</pose>
+      <mass>0.80000</mass>
+    </inertial>
+
+    <visual name=" Suspension_cup_BL">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name=" Suspension_cup_BL_collision">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_axis_BL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00008</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00008</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.000001</izz>
+      </inertia>
+      <pose>-0.138494 -0.270693 0.067311 0 0 0</pose>
+      <mass>0.10000</mass>
+    </inertial>
+
+    <visual name="Caster_axis_BL">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_axis_BL_collision">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_bar_BL_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00001</ixx>
+        <ixy>0.00000</ixy>
+        <ixz>-0.00000</ixz>
+        <iyy>0.00001</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.00001</izz>
+      </inertia>
+      <pose>-0.138502 -0.262586 0.015664 0 0 0</pose>
+      <mass>0.05000</mass>
+    </inertial>
+
+    <visual name="Caster_bar_BL">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_bar_BL_collision">
+      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_wheel_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00001</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00001</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00001</izz>
+      </inertia>
+      <pose>-0.138502 -0.249118 -0.000996 0 0 0</pose>
+      <mass>0.05000</mass>
+    </inertial>
+
+    <visual name="Caster_wheel">
+      <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_wheel.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_wheel_collision">
+      <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <geometry>
+        <cylinder>
+          <radius>0.01900</radius>
+          <length>0.02107</length>
+        </cylinder>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <!-- Suspension back right MESHES-->
+
+  <link name="Suspension_cup_BR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00180</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00180</iyy>
+        <iyz>-0.00000</iyz>
+        <izz>0.00091</izz>
+      </inertia>`
+      <pose>0.138501 -0.270709 0.081547 0 0 0</pose>
+      <mass>0.80000</mass>
+    </inertial>
+
+    <visual name=" Suspension_cup_BR">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name=" Suspension_cup_BR_collision">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_axis_BR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00008</ixx>
+        <ixy>-0.00000</ixy>
+        <ixz>0.00000</ixz>
+        <iyy>0.00008</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.000001</izz>
+      </inertia>
+      <pose>0.138494 -0.270693 0.067311 0 0 0</pose>
+      <mass>0.10000</mass>
+    </inertial>
+
+    <visual name="Caster_axis_BR">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_axis_BR_collision">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_axis.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <link name="Caster_bar_BR_link">
+    <inertial>
+      <inertia>
+        <ixx>0.00001</ixx>
+        <ixy>0.00000</ixy>
+        <ixz>-0.00000</ixz>
+        <iyy>0.00001</iyy>
+        <iyz>0.00000</iyz>
+        <izz>0.00001</izz>
+      </inertia>
+      <pose>0.138502 -0.262586 0.015664 0 0 0</pose>
+      <mass>0.05000</mass>
+    </inertial>
+
+    <visual name="Caster_bar_BR">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+    </visual>
+
+    <collision name="Caster_bar_BR_collision">
+      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>file://model/meshes/caster_bar.obj</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+      </geometry>
+      <surface>
+        <contact/>
+      </surface>
+    </collision>
+  </link>
+
+  <!-- Drive wheels JOINTS -->
+
+  <joint name="Drive_wheel_R_link_joint" type="revolute">
+    <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
+    <parent>Body_link</parent>
+    <child>Drive_wheel_R_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <joint name="Drive_wheel_L_link_joint" type="revolute">
+    <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
+    <parent>Body_link</parent>
+    <child>Drive_wheel_L_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <!-- Suspension front right JOINTS -->
+
+  <joint name="Suspension_cup_FR_link_joint" type="fixed">
+    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Body_link</parent>
+    <child>Suspension_cup_FR_link</child>
+    <axis/>
+    <axis2/>
+  </joint>
+
+  <joint name="Caster_axis_FR_link_joint" type="prismatic">
+    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Suspension_cup_FR_link</parent>
+    <child>Caster_axis_FR_link</child>
+    <axis>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+      <limit>
+        <lower>0.00000</lower>
+        <upper>0.02300</upper>
+        <effort>150.00000</effort>
+        <velocity>0.00000</velocity>
+      </limit>
+      <xyz>0 0 1</xyz>
+    </axis>
+    <axis2>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+    </axis2>
+  </joint>
+
+  <joint name="Caster_bar_FR_link_joint" type="revolute">
+    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Caster_axis_FR_link</parent>
+    <child>Caster_bar_FR_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <!-- Suspension front left JOINTS -->
+
+  <joint name="Suspension_cup_FL_link_joint" type="fixed">
+    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Body_link</parent>
+    <child>Suspension_cup_FL_link</child>
+    <axis/>
+    <axis2/>
+  </joint>
+
+  <joint name="Caster_axis_FL_link_joint" type="prismatic">
+    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Suspension_cup_FL_link</parent>
+    <child>Caster_axis_FL_link</child>
+    <axis>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+      <limit>
+        <lower>0.00000</lower>
+        <upper>0.02300</upper>
+        <effort>150.00000</effort>
+        <velocity>0.00000</velocity>
+      </limit>
+      <xyz>0 0 1</xyz>
+    </axis>
+    <axis2>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+    </axis2>
+  </joint>
+
+  <joint name="Caster_bar_FL_link_joint" type="revolute">
+    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <parent>Caster_axis_FL_link</parent>
+    <child>Caster_bar_FL_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <!-- Suspension back left JOINTS -->
+
+  <joint name="Suspension_cup_BL_link_joint" type="fixed">
+    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Body_link</parent>
+    <child>Suspension_cup_BL_link</child>
+    <axis/>
+    <axis2/>
+  </joint>
+
+  <joint name="Caster_axis_BL_link_joint" type="prismatic">
+    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Suspension_cup_BL_link</parent>
+    <child>Caster_axis_BL_link</child>
+    <axis>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+      <limit>
+        <lower>0.00000</lower>
+        <upper>0.02300</upper>
+        <effort>150.00000</effort>
+        <velocity>0.00000</velocity>
+      </limit>
+      <xyz>0 0 1</xyz>
+    </axis>
+    <axis2>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+    </axis2>
+  </joint>
+
+  <joint name="Caster_bar_BL_link_joint" type="revolute">
+    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Caster_axis_BL_link</parent>
+    <child>Caster_bar_BL_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <joint name="Caster_wheel_link_joint" type="revolute">
+    <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+    <parent>Caster_bar_BL_link</parent>
+    <child>Caster_wheel_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <!-- Suspension back right JOINTS -->
+
+  <joint name="Suspension_cup_BR_link_joint" type="fixed">
+    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Body_link</parent>
+    <child>Suspension_cup_BR_link</child>
+    <axis/>
+    <axis2/>
+  </joint>
+
+  <joint name="Caster_axis_BR_link_joint" type="prismatic">
+    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Suspension_cup_BR_link</parent>
+    <child>Caster_axis_BR_link</child>
+    <axis>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+      <limit>
+        <lower>0.00000</lower>
+        <upper>0.02300</upper>
+        <effort>150.00000</effort>
+        <velocity>0.00000</velocity>
+      </limit>
+      <xyz>0 0 1</xyz>
+    </axis>
+    <axis2>
+      <dynamics>
+        <damping>5.00000</damping>
+        <spring_stiffness>4000.00000</spring_stiffness>
+      </dynamics>
+    </axis2>
+  </joint>
+
+  <joint name="Caster_bar_BR_link_joint" type="revolute">
+    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <parent>Caster_axis_BR_link</parent>
+    <child>Caster_bar_BR_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+      <limit>
+        <lower>-1.79769e+308</lower>
+        <upper>1.79769e+308</upper>
+      </limit>
+    </axis>
+    <axis2/>
+  </joint>
+
+  <!-- PLUGINS -->
 
   <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
     <joint_name>left_wheel_link_joint</joint_name>

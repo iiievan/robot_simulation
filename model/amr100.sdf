@@ -130,12 +130,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00091</izz>
       </inertia>`
-      <pose>0.139317 0.270913 0.081547 0 0 0</pose>
+      <pose>0.139317 0.270913 0.09289 0 0 0</pose>
       <mass>0.80000</mass>
     </inertial>
 
     <visual name="Suspension_cup_FR">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -145,7 +145,7 @@
     </visual>
 
     <collision name="Suspension_cup_FR_collision">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -168,7 +168,7 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>0.13931 0.270897 0.067311 0 0 0</pose>
+      <pose>0.13931 0.270897 0.067314 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
@@ -284,12 +284,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00091</izz>
       </inertia>`
-      <pose>-0.139317 0.270913 0.081547 0 0 0</pose>
+      <pose>-0.139317 0.270913 0.09289 0 0 0</pose>
       <mass>0.80000</mass>
     </inertial>
 
     <visual name=" Suspension_cup_FL">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -299,7 +299,7 @@
     </visual>
 
     <collision name=" Suspension_cup_FL_collision">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -322,7 +322,7 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>-0.13931 0.270897 0.067311 0 0 0</pose>
+      <pose>-0.13931 0.270897 0.067314 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
@@ -438,12 +438,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00091</izz>
       </inertia>`
-      <pose>0.138501 -0.270709 0.081547 0 0 0</pose>
+      <pose>0.138501 -0.270709 0.09289 0 0 0</pose>
       <mass>0.80000</mass>
     </inertial>
 
     <visual name=" Suspension_cup_BR">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -453,7 +453,7 @@
     </visual>
 
     <collision name=" Suspension_cup_BR_collision">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -476,7 +476,7 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>0.138494 -0.270693 0.067311 0 0 0</pose>
+      <pose>0.138494 -0.270693 0.067314 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
@@ -592,12 +592,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00091</izz>
       </inertia>`
-      <pose>-0.138501 -0.270709 0.081547 0 0 0</pose>
+      <pose>-0.138501 -0.270709 0.09289 0 0 0</pose>
       <mass>0.80000</mass>
     </inertial>
 
     <visual name=" Suspension_cup_BL">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -607,7 +607,7 @@
     </visual>
 
     <collision name=" Suspension_cup_BL_collision">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/suspension_cup.obj</uri>
@@ -630,7 +630,7 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>-0.138494 -0.270693 0.067311 0 0 0</pose>
+      <pose>-0.138494 -0.270693 0.067314 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
@@ -767,7 +767,7 @@
   <!-- Suspension front right JOINTS -->
 
   <joint name="Suspension_cup_FR_link_joint" type="fixed">
-    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>0.139318 0.270912 0.144495 0 0 0</pose>
     <parent>Body_link</parent>
     <child>Suspension_cup_FR_link</child>
     <axis/>
@@ -775,26 +775,26 @@
   </joint>
 
   <joint name="Caster_axis_FR_link_joint" type="prismatic">
-    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>0.139318 0.270912 0.144495 0 3.14159 0</pose>
     <parent>Suspension_cup_FR_link</parent>
     <child>Caster_axis_FR_link</child>
     <axis>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
-        <lower>0.00000</lower>
-        <upper>0.02300</upper>
-        <effort>150.00000</effort>
+        <lower>-0.02600</lower>
+        <upper>0.00000</upper>
+        <effort>161.00000</effort>
         <velocity>0.00000</velocity>
       </limit>
       <xyz>0 0 1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -830,7 +830,7 @@
   <!-- Suspension front left JOINTS -->
 
   <joint name="Suspension_cup_FL_link_joint" type="fixed">
-    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>-0.139318 0.270912 0.144495 0 0 0</pose>
     <parent>Body_link</parent>
     <child>Suspension_cup_FL_link</child>
     <axis/>
@@ -838,26 +838,26 @@
   </joint>
 
   <joint name="Caster_axis_FL_link_joint" type="prismatic">
-    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>-0.139318 0.270912 0.144495 0 3.14159 0</pose>
     <parent>Suspension_cup_FL_link</parent>
     <child>Caster_axis_FL_link</child>
     <axis>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
-        <lower>0.00000</lower>
-        <upper>0.02300</upper>
-        <effort>150.00000</effort>
+        <lower>-0.02600</lower>
+        <upper>0.00000</upper>
+        <effort>160.00000</effort>
         <velocity>0.00000</velocity>
       </limit>
       <xyz>0 0 1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -893,7 +893,7 @@
   <!-- Suspension back right JOINTS -->
 
   <joint name="Suspension_cup_BR_link_joint" type="fixed">
-    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>0.138502 -0.270708 0.144495 0 0 0</pose>
     <parent>Body_link</parent>
     <child>Suspension_cup_BR_link</child>
     <axis/>
@@ -901,26 +901,26 @@
   </joint>
 
   <joint name="Caster_axis_BR_link_joint" type="prismatic">
-    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>0.138502 -0.270708 0.144495 0 3.14159 0</pose>
     <parent>Suspension_cup_BR_link</parent>
     <child>Caster_axis_BR_link</child>
     <axis>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
-        <lower>0.00000</lower>
-        <upper>0.02300</upper>
-        <effort>150.00000</effort>
+        <lower>-0.02600</lower>
+        <upper>0.00000</upper>
+        <effort>161.00000</effort>
         <velocity>0.00000</velocity>
       </limit>
       <xyz>0 0 1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -956,7 +956,7 @@
   <!-- Suspension back left JOINTS -->
 
   <joint name="Suspension_cup_BL_link_joint" type="fixed">
-    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>-0.138502 -0.270708 0.144495 0 0 0</pose>
     <parent>Body_link</parent>
     <child>Suspension_cup_BL_link</child>
     <axis/>
@@ -964,26 +964,26 @@
   </joint>
 
   <joint name="Caster_axis_BL_link_joint" type="prismatic">
-    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>-0.138502 -0.270708 0.144495 0 3.14159 0</pose>
     <parent>Suspension_cup_BL_link</parent>
     <child>Caster_axis_BL_link</child>
     <axis>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
-        <lower>0.00000</lower>
-        <upper>0.02300</upper>
-        <effort>150.00000</effort>
+        <lower>-0.02600</lower>
+        <upper>0.00000</upper>
+        <effort>161.00000</effort>
         <velocity>0.00000</velocity>
       </limit>
       <xyz>0 0 1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>5.00000</damping>
-        <spring_stiffness>4000.00000</spring_stiffness>
+        <damping>0.18000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -1052,7 +1052,7 @@
             <match field="data">87</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: 3.5, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.5}
         </output>
     </plugin>
 
@@ -1063,7 +1063,7 @@
             <match field="data">83</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: -3.5, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}
         </output>
     </plugin>
 
@@ -1074,7 +1074,7 @@
             <match field="data">65</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.07}
+            linear: {x: -0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 
@@ -1085,7 +1085,7 @@
             <match field="data">68</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.07}
+            linear: {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 

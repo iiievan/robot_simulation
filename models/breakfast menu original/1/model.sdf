@@ -1,29 +1,43 @@
 <?xml version="1.0" ?>
-<!--
-Copyright 2020 Google LLC.
-
-This work is licensed under the Creative Commons Attribution 4.0
-International License. To view a copy of this license, visit
-http://creativecommons.org/licenses/by/4.0/ or send a letter
-to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
--->
 <sdf version="1.11">
-    <model name="breakfast_menu">
-        <link name="link_0">
-            <visual name="visual">
-                <geometry>
-                    <mesh>
-                        <uri>meshes/model.obj</uri>
-                    </mesh>
-                </geometry>
-            </visual>
-            <collision name="collision_0">
-                <geometry>
-                    <mesh>
-                        <uri>meshes/model.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-        </link>
-    </model>
+  <model name="breakfast_menu">
+    
+    <link name="link_0">
+      <inertial>
+        <inertia>
+          <ixx>0.02104</ixx>
+          <ixy>0.00031</ixy>
+          <ixz>0.00113</ixz>
+          <iyy>0.05241</iyy>
+          <iyz>-0.00055</iyz>
+          <izz>0.07039</izz>
+        </inertia>
+        <pose>0.00038 0.00307 0.01665 0 0 0</pose>
+        <mass>10.00000</mass>
+      </inertial>
+
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+              <uri>meshes/model.obj</uri>
+              <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="collision_0">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+              <uri>meshes/model.obj</uri>
+              <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact/>
+        </surface>
+      </collision>
+    </link>
+  </model>
 </sdf>

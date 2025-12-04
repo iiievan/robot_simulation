@@ -780,21 +780,21 @@
     <child>Caster_axis_FR_link</child>
     <axis>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
-        <upper>0.00000</upper>
-        <effort>161.00000</effort>
-        <velocity>0.00000</velocity>
+        <upper>0.00900</upper>
+        <effort>105.00000</effort>
+        <velocity>0.5</velocity>
       </limit>
-      <xyz>0 0 1</xyz>
+      <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -843,21 +843,21 @@
     <child>Caster_axis_FL_link</child>
     <axis>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
-        <upper>0.00000</upper>
-        <effort>160.00000</effort>
-        <velocity>0.00000</velocity>
+        <upper>0.00900</upper>
+        <effort>105.00000</effort>
+        <velocity>0.5</velocity>
       </limit>
-      <xyz>0 0 1</xyz>
+      <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -906,21 +906,21 @@
     <child>Caster_axis_BR_link</child>
     <axis>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
-        <upper>0.00000</upper>
-        <effort>161.00000</effort>
-        <velocity>0.00000</velocity>
+        <upper>0.00900</upper>
+        <effort>105.00000</effort>
+        <velocity>0.5</velocity>
       </limit>
-      <xyz>0 0 1</xyz>
+      <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -969,21 +969,21 @@
     <child>Caster_axis_BL_link</child>
     <axis>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
-        <upper>0.00000</upper>
-        <effort>161.00000</effort>
-        <velocity>0.00000</velocity>
+        <upper>0.00900</upper>
+        <effort>105.00000</effort>
+        <velocity>0.5</velocity>
       </limit>
-      <xyz>0 0 1</xyz>
+      <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>0.18000</damping>
-        <spring_stiffness>6070.00000</spring_stiffness>
+        <damping>120.00000</damping>
+        <spring_stiffness>3000.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>

@@ -20,7 +20,7 @@
       <pose>0 0 0.021993 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/body.obj</uri>
+          <uri>file://models/amr100/meshes/body.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -30,7 +30,7 @@
       <pose>0 0 0.021993 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/body.obj</uri>
+          <uri>file://models/amr100/meshes/body.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -60,7 +60,7 @@
       <pose>0.2075 0.001 0.062 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/drive_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/drive_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -98,7 +98,7 @@
       <pose>-0.2075 0.001 0.062 0 -1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/drive_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/drive_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -138,7 +138,7 @@
       <pose>0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -148,7 +148,7 @@
       <pose>0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -176,7 +176,7 @@
       <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -186,7 +186,7 @@
       <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -214,7 +214,7 @@
       <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -224,7 +224,7 @@
       <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -252,7 +252,7 @@
       <pose>0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/caster_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -292,7 +292,7 @@
       <pose>-0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -302,7 +302,7 @@
       <pose>-0.139318 0.270912 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -330,7 +330,7 @@
       <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -340,7 +340,7 @@
       <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -368,7 +368,7 @@
       <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -378,7 +378,7 @@
       <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -406,7 +406,7 @@
       <pose>-0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/caster_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -446,7 +446,7 @@
       <pose>0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -456,7 +456,7 @@
       <pose>0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -484,7 +484,7 @@
       <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -494,7 +494,7 @@
       <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -522,7 +522,7 @@
       <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -532,7 +532,7 @@
       <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -560,7 +560,7 @@
       <pose>0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/caster_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -600,7 +600,7 @@
       <pose>-0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -610,7 +610,7 @@
       <pose>-0.138502 -0.270708 0.144495 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/suspension_cup.obj</uri>
+          <uri>file://models/amr100/meshes/suspension_cup.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -638,7 +638,7 @@
       <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -648,7 +648,7 @@
       <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_axis.obj</uri>
+          <uri>file://models/amr100/meshes/caster_axis.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -676,7 +676,7 @@
       <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -686,7 +686,7 @@
       <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_bar.obj</uri>
+          <uri>file://models/amr100/meshes/caster_bar.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -714,7 +714,7 @@
       <pose>-0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
-          <uri>file://model/meshes/caster_wheel.obj</uri>
+          <uri>file://models/amr100/meshes/caster_wheel.obj</uri>
           <scale>1 1 1</scale>
         </mesh>
       </geometry>
@@ -780,21 +780,21 @@
     <child>Caster_axis_FR_link</child>
     <axis>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
         <upper>0.00900</upper>
-        <effort>105.00000</effort>
+        <effort>210.00000</effort>
         <velocity>0.5</velocity>
       </limit>
       <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -843,21 +843,21 @@
     <child>Caster_axis_FL_link</child>
     <axis>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
         <upper>0.00900</upper>
-        <effort>105.00000</effort>
+        <effort>210.00000</effort>
         <velocity>0.5</velocity>
       </limit>
       <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -906,21 +906,21 @@
     <child>Caster_axis_BR_link</child>
     <axis>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
         <upper>0.00900</upper>
-        <effort>105.00000</effort>
+        <effort>210.00000</effort>
         <velocity>0.5</velocity>
       </limit>
       <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>
@@ -969,21 +969,21 @@
     <child>Caster_axis_BL_link</child>
     <axis>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
       <limit>
         <lower>-0.02600</lower>
         <upper>0.00900</upper>
-        <effort>105.00000</effort>
+        <effort>210.00000</effort>
         <velocity>0.5</velocity>
       </limit>
       <xyz>0 0 -1</xyz>
     </axis>
     <axis2>
       <dynamics>
-        <damping>120.00000</damping>
-        <spring_stiffness>3000.00000</spring_stiffness>
+        <damping>240.00000</damping>
+        <spring_stiffness>6070.00000</spring_stiffness>
       </dynamics>
     </axis2>
   </joint>

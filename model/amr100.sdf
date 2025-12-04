@@ -158,7 +158,7 @@
     </collision>
   </link>
 
-    <link name="Caster_axis_FR_link">
+  <link name="Caster_axis_FR_link">
     <inertial>
       <inertia>
         <ixx>0.00008</ixx>
@@ -168,12 +168,12 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>0.13931 0.270897 0.067314 0 0 0</pose>
+      <pose>0.13931 0.270897 0.087179 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
     <visual name="Caster_axis_FR">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -183,7 +183,7 @@
     </visual>
 
     <collision name="Caster_axis_FR_collision">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -206,12 +206,12 @@
         <iyz>0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>0.139318 0.26279 0.015664 0 0 0</pose>
+      <pose>0.139318 0.26279 0.035529 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_bar_FR">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -221,7 +221,7 @@
     </visual>
 
     <collision name="Caster_bar_FR_collision">
-      <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -244,12 +244,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>0.139318 0.292502 -0.000996 0 0 0</pose>
+      <pose>0.139318 0.292502 0.018867 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_wheel_FR">
-      <pose>0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+      <pose>0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_wheel.obj</uri>
@@ -259,7 +259,7 @@
     </visual>
 
     <collision name="Caster_wheel_FR_collision">
-      <pose>0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+      <pose>0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <cylinder>
           <radius>0.01900</radius>
@@ -322,12 +322,12 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>-0.13931 0.270897 0.067314 0 0 0</pose>
+      <pose>-0.13931 0.270897 0.087179 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
     <visual name="Caster_axis_FL">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -337,7 +337,7 @@
     </visual>
 
     <collision name="Caster_axis_FL_collision">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -360,12 +360,12 @@
         <iyz>0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>-0.139318 0.26279 0.015664 0 0 0</pose>
+      <pose>-0.139318 0.26279 0.035529 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_bar_FL">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -375,7 +375,7 @@
     </visual>
 
     <collision name="Caster_bar_FL_collision">
-      <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+      <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -398,12 +398,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>-0.139318 0.292502 -0.000996 0 0 0</pose>
+      <pose>-0.139318 0.292502 0.018867 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_wheel_FL">
-      <pose>-0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+      <pose>-0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_wheel.obj</uri>
@@ -413,7 +413,7 @@
     </visual>
 
     <collision name="Caster_wheel_FL_collision">
-      <pose>-0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+      <pose>-0.139318 0.292502 0.018867 0 1.5708 0</pose>
       <geometry>
         <cylinder>
           <radius>0.01900</radius>
@@ -476,12 +476,12 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>0.138494 -0.270693 0.067314 0 0 0</pose>
+      <pose>0.138494 -0.270693 0.087179 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
     <visual name="Caster_axis_BR">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -491,7 +491,7 @@
     </visual>
 
     <collision name="Caster_axis_BR_collision">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -514,12 +514,12 @@
         <iyz>0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>0.138502 -0.262586 0.015664 0 0 0</pose>
+      <pose>0.138502 -0.262586 0.035529 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_bar_BR">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -529,7 +529,7 @@
     </visual>
 
     <collision name="Caster_bar_BR_collision">
-      <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -552,12 +552,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>0.138502 -0.249118 -0.000996 0 0 0</pose>
+      <pose>0.138502 -0.249118 0.018867 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_wheel_BR">
-      <pose>0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <pose>0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_wheel.obj</uri>
@@ -567,7 +567,7 @@
     </visual>
 
     <collision name="Caster_wheel_BR_collision">
-      <pose>0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <pose>0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <cylinder>
           <radius>0.01900</radius>
@@ -630,12 +630,12 @@
         <iyz>0.00000</iyz>
         <izz>0.000001</izz>
       </inertia>
-      <pose>-0.138494 -0.270693 0.067314 0 0 0</pose>
+      <pose>-0.138494 -0.270693 0.087179 0 0 0</pose>
       <mass>0.10000</mass>
     </inertial>
 
     <visual name="Caster_axis_BL">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -645,7 +645,7 @@
     </visual>
 
     <collision name="Caster_axis_BL_collision">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_axis.obj</uri>
@@ -668,12 +668,12 @@
         <iyz>0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>-0.138502 -0.262586 0.015664 0 0 0</pose>
+      <pose>-0.138502 -0.262586 0.035529 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_bar_BL">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -683,7 +683,7 @@
     </visual>
 
     <collision name="Caster_bar_BL_collision">
-      <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+      <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_bar.obj</uri>
@@ -706,12 +706,12 @@
         <iyz>-0.00000</iyz>
         <izz>0.00001</izz>
       </inertia>
-      <pose>-0.138502 -0.249118 -0.000996 0 0 0</pose>
+      <pose>-0.138502 -0.249118 0.018867 0 0 0</pose>
       <mass>0.05000</mass>
     </inertial>
 
     <visual name="Caster_wheel_BL">
-      <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <pose>-0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <mesh>
           <uri>file://model/meshes/caster_wheel.obj</uri>
@@ -721,7 +721,7 @@
     </visual>
 
     <collision name="Caster_wheel_BL_collision">
-      <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+      <pose>-0.138502 -0.249118 0.018867 0 1.5708 0</pose>
       <geometry>
         <cylinder>
           <radius>0.01900</radius>
@@ -800,7 +800,7 @@
   </joint>
 
   <joint name="Caster_bar_FR_link_joint" type="revolute">
-    <pose>0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>0.139318 0.270912 0.049859 0 0 0</pose>
     <parent>Caster_axis_FR_link</parent>
     <child>Caster_bar_FR_link</child>
     <axis>
@@ -814,7 +814,7 @@
   </joint>
 
   <joint name="Caster_wheel_FR_link_joint" type="revolute">
-    <pose>0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+    <pose>0.139318 0.292502 0.018867 0 1.5708 0</pose>
     <parent>Caster_bar_FR_link</parent>
     <child>Caster_wheel_FR_link</child>
     <axis>
@@ -863,7 +863,7 @@
   </joint>
 
   <joint name="Caster_bar_FL_link_joint" type="revolute">
-    <pose>-0.139318 0.270912 0.029994 0 0 0</pose>
+    <pose>-0.139318 0.270912 0.049859 0 0 0</pose>
     <parent>Caster_axis_FL_link</parent>
     <child>Caster_bar_FL_link</child>
     <axis>
@@ -877,7 +877,7 @@
   </joint>
 
   <joint name="Caster_wheel_FL_link_joint" type="revolute">
-    <pose>-0.139318 0.292502 -0.000996 0 1.5708 0</pose>
+    <pose>-0.139318 0.292502 0.018867 0 1.5708 0</pose>
     <parent>Caster_bar_FL_link</parent>
     <child>Caster_wheel_FL_link</child>
     <axis>
@@ -926,7 +926,7 @@
   </joint>
 
   <joint name="Caster_bar_BR_link_joint" type="revolute">
-    <pose>0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>0.138502 -0.270708 0.049859 0 0 0</pose>
     <parent>Caster_axis_BR_link</parent>
     <child>Caster_bar_BR_link</child>
     <axis>
@@ -940,7 +940,7 @@
   </joint>
 
   <joint name="Caster_wheel_BR_link_joint" type="revolute">
-    <pose>0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+    <pose>0.138502 -0.249118 0.018867 0 1.5708 0</pose>
     <parent>Caster_bar_BR_link</parent>
     <child>Caster_wheel_BR_link</child>
     <axis>
@@ -989,7 +989,7 @@
   </joint>
 
   <joint name="Caster_bar_BL_link_joint" type="revolute">
-    <pose>-0.138502 -0.270708 0.029994 0 0 0</pose>
+    <pose>-0.138502 -0.270708 0.049859 0 0 0</pose>
     <parent>Caster_axis_BL_link</parent>
     <child>Caster_bar_BL_link</child>
     <axis>
@@ -1003,7 +1003,7 @@
   </joint>
 
   <joint name="Caster_wheel_BL_link_joint" type="revolute">
-    <pose>-0.138502 -0.249118 -0.000996 0 1.5708 0</pose>
+    <pose>-0.138502 -0.249118 0.018867 0 1.5708 0</pose>
     <parent>Caster_bar_BL_link</parent>
     <child>Caster_wheel_BL_link</child>
     <axis>
@@ -1052,7 +1052,7 @@
             <match field="data">87</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.5}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -3.0}
         </output>
     </plugin>
 
@@ -1063,7 +1063,7 @@
             <match field="data">83</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}
+            linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 3.0}
         </output>
     </plugin>
 
@@ -1074,7 +1074,7 @@
             <match field="data">65</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: -0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
+            linear: {x: -0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 
@@ -1085,7 +1085,7 @@
             <match field="data">68</match>
         </input>
         <output type="gz.msgs.Twist" topic="/cmd_vel">
-            linear: {x: 0.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
+            linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
     </plugin>
 

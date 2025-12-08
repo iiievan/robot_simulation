@@ -1,0 +1,12 @@
+# Blender 4.2.16 LTS MTL File: 'AMR100_suspension.blend'
+# www.blender.org
+
+newmtl Blued_steel.001
+Ns 250.000000
+Ka 0.822727 0.822727 0.822727
+Kd 0.043978 0.032976 0.038259
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3

@@ -1,3 +1,0 @@
-Instantiated with filepath=None->None, scale=[1.0000011920928955, 1.0000005960464478, 1.0], mesh=<bpy_struct, Mesh("Cylinder.005") at 0x7b3b170bae20>, meshname=Cylinder.005, material=None, mesh_orientation=None
-->trying export of <bpy_struct, Mesh("Cylinder.005") at 0x7b3b170bae20> to /home/mbokastnev/code/robot_simulation/robot_model/phobos/amr100/meshes/obj/Cylinder.005.obj
-->wrote obj to /home/mbokastnev/code/robot_simulation/robot_model/phobos/amr100/meshes/obj/Cylinder.005.obj from bpy_types.Mesh

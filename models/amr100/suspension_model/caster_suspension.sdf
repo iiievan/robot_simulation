@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.12">
+<sdf version="1.10">
   <model name="caster_suspension">
 
   <!-- Caster suspension LINKS -->

@@ -1,4 +1,4 @@
-<sdf version='1.12'>
+<sdf version='1.10'>
   <world name='esipovo'>
     <physics name='1ms' type='ignored'>
       <max_step_size>0.001</max_step_size>
@@ -17,9 +17,6 @@
       <background>0.699999988 0.699999988 0.699999988 1</background>
       <shadows>true</shadows>
     </scene>
-    <gui fullscreen='false'>
-      <plugin name='Key publisher' filename='KeyPublisher'/>
-    </gui>
     <model name='floor'>
       <static>true</static>
       <link name='link'>

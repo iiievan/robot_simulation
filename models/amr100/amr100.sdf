@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<sdf version="1.10">
+<sdf version="1.12">
 <model name="amr100">
 
   <link name="Body_link">
@@ -1087,6 +1087,14 @@
         <output type="gz.msgs.Twist" topic="/cmd_vel">
             linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}
         </output>
+    </plugin>
+
+    <!-- Encoder Plugin -->
+    <plugin name="encoder_plugin" filename="libencoder_plugin.so">
+      <left_joint>Drive_wheel_L_link_joint</left_joint>
+      <right_joint>Drive_wheel_R_link_joint</right_joint>
+      <topic>/encoder_data</topic>
+      <ticks_per_rev>10000</ticks_per_rev>
     </plugin>
 
 </model>

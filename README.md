@@ -1,8 +1,8 @@
 # robot_simulation
 
-## Экспорт модели из blender в Collada .dae
+## пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ blender пїЅ Collada .dae
 ```
-Вкладка Main:
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Main:
     [V] Selection Only
     [ ] Include Children
     [ ] Include Armatures  
@@ -10,26 +10,26 @@
 
     Global Orientation:
     [ ] Apply
-    Forward Axis: [-Y]  <!-- Ваш случай: прямо = -Y -->
-    Up Axis: [Z]        <!-- Ваш случай: вверх = Z -->
+    Forward Axis: [-Y]  <!-- пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅ = -Y -->
+    Up Axis: [Z]        <!-- пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅ = Z -->
 
     Texture Options:
     [V] Copy
  UV [ ] Only Selected Map
 
-Вкладка Geom:
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Geom:
     Export Data Options:
     [V] Triangulate
-    Apply Modifiers [Viewport]  <!-- Или Render если нужно -->
-    Transform [Decomposed]      <!-- Лучше для Gazebo -->
+    Apply Modifiers [Viewport]  <!-- пїЅпїЅпїЅ Render пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ -->
+    Transform [Decomposed]      <!-- пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Gazebo -->
 
-Вкладка Arm:
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Arm:
     Armature Options: 
     [] Deform Bones only
     [] Export to SL/OpenSim
 
-Вкладка Anim:
-    [ ] Include Animations  <!-- Отключите если нет анимации -->
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Anim:
+    [ ] Include Animations  <!-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ -->
     Key Type: [Samples]
     [ ] Keep Smooth Curves
     Sampling rate: {1}
@@ -38,7 +38,7 @@
     [ ] Include all Actions
     Transform [Decomposed]
 
-Вкладка Extra:
+пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Extra:
     Collada Options:
     [V] Use Object Instances
     [V] Use Blender Profile
@@ -46,7 +46,12 @@
     [] Keep Bind info
     [] Limit Precision
 
- где [] - пустое поле для галочки
-     [V] - поля в которых стоят галочки по умолчанию.
+ пїЅпїЅпїЅ [] - пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+     [V] - пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 
+```
+
+To run from WSL2 and Ubuntu-24.04 
+```
+env -u WAYLAND_DISPLAY gz sim -v 4 esipovo.sdf
 ```

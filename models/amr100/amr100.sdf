@@ -1090,7 +1090,7 @@
     </plugin>
 
     <!-- Encoder Plugin -->
-    <plugin name="encoder_plugin" filename="libencoder_plugin.so">
+    <plugin name="gz::sim::v10::systems::EncoderPlugin" filename="libencoder_plugin.so">
       <left_joint>Drive_wheel_L_link_joint</left_joint>
       <right_joint>Drive_wheel_R_link_joint</right_joint>
       <topic>/encoder_data</topic>

@@ -6,6 +6,7 @@
 #include <gz/sim/Joint.hh>
 #include <gz/transport/Node.hh>
 #include <gz/msgs.hh>
+#include <gz/plugin/Register.hh>
 
 namespace gz::sim::systems
 {
@@ -35,7 +36,7 @@ namespace gz::sim::systems
             std::string jointName;
             double lastPosition{0.0};
             int64_t totalTicks{0};
-            int64_t ticksPerRevolution{20000}; // 10000 тиков/об * передаточное число 2
+            int64_t ticksPerRevolution{20000};
         };
 
         EncoderData leftEncoder_;
@@ -49,5 +50,13 @@ namespace gz::sim::systems
         bool initialized_{false};
     };
 }
+
+
+
+GZ_ADD_PLUGIN(
+    gz::sim::systems::EncoderPlugin,
+    gz::sim::System,
+    gz::sim::systems::EncoderPlugin::ISystemConfigure,
+    gz::sim::systems::EncoderPlugin::ISystemPreUpdate)
 
 #endif

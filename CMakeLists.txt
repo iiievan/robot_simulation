@@ -17,6 +17,10 @@ set(GZ_INCLUDE_DIRS
         /usr/include/gz/utils4/gz/utils  # Критически важный путь
         /usr/include/gz/sdformat16  # Для sdf/Element.hh
         /usr/include/gz/sdformat16/sdf  # Для SDF версии 13
+        /usr/include/gz/sdformat16  # Для sdf/Element.hh
+        /usr/include/gz/sdformat16/sdf  # Для SDF версии 13
+        /usr/include/gz/plugin4
+        /usr/include/gz/plugin4/gz/plugin
 )
 
 set(GZ_LIBRARIES
@@ -26,6 +30,7 @@ set(GZ_LIBRARIES
         gz-common
         gz-math
         gz-utils
+        gz-plugin
         sdformat
         protobuf
 )
@@ -77,6 +82,7 @@ target_compile_options(encoder_plugin
         -Wall
         -Wextra
         -Wno-deprecated-declarations
+        -fvisibility=default
 )
 
 # Установка плагина

@@ -8,7 +8,11 @@ using namespace gz;
 using namespace sim;
 using namespace systems;
 
-EncoderPlugin::EncoderPlugin() = default;
+// ДОБАВЬТЕ КОНСТРУКТОР:
+EncoderPlugin::EncoderPlugin()
+{
+    gzmsg << "EncoderPlugin constructor called" << std::endl;
+}
 
 void EncoderPlugin::Configure(const Entity& entity,
                              const std::shared_ptr<const sdf::Element>& sdf,
@@ -36,7 +40,6 @@ void EncoderPlugin::Configure(const Entity& entity,
     if (sdf->HasElement("ticks_per_rev"))
     {
         int baseTicks = sdf->Get<int>("ticks_per_rev");
-        // Умножаем на передаточное число 2
         leftEncoder_.ticksPerRevolution = baseTicks * 2;
         rightEncoder_.ticksPerRevolution = baseTicks * 2;
     }
@@ -87,6 +90,7 @@ void EncoderPlugin::PreUpdate(const UpdateInfo& info,
             node_.Advertise<msgs::Float_V>(topic_));
 
         initialized_ = true;
+        gzmsg << "EncoderPlugin полностью инициализирован" << std::endl;
     }
 
     // Получаем текущие позиции шарниров
@@ -96,7 +100,6 @@ void EncoderPlugin::PreUpdate(const UpdateInfo& info,
     if (!leftPosComp || !rightPosComp)
         return;
 
-    // В Gazebo 10 Data() возвращает std::vector<double> напрямую
     const std::vector<double>& leftPositions = leftPosComp->Data();
     const std::vector<double>& rightPositions = rightPosComp->Data();
 
@@ -111,7 +114,6 @@ void EncoderPlugin::PreUpdate(const UpdateInfo& info,
     double rightDelta = rightPos - rightEncoder_.lastPosition;
 
     // Преобразуем радианы в тики энкодера
-    // 2π радиан = 1 оборот = ticksPerRevolution тиков
     int64_t leftTicks = static_cast<int64_t>((leftDelta / (2 * M_PI)) * leftEncoder_.ticksPerRevolution);
     int64_t rightTicks = static_cast<int64_t>((rightDelta / (2 * M_PI)) * rightEncoder_.ticksPerRevolution);
 
@@ -125,14 +127,14 @@ void EncoderPlugin::PreUpdate(const UpdateInfo& info,
 
     // Публикуем данные
     msgs::Float_V encoderMsg;
-    encoderMsg.add_data(static_cast<double>(leftEncoder_.totalTicks)); // Левый энкодер
-    encoderMsg.add_data(static_cast<double>(rightEncoder_.totalTicks)); // Правый энкодер
-    encoderMsg.add_data(static_cast<double>(leftTicks)); // Дельта левого
-    encoderMsg.add_data(static_cast<double>(rightTicks)); // Дельта правого
+    encoderMsg.add_data(static_cast<double>(leftEncoder_.totalTicks));
+    encoderMsg.add_data(static_cast<double>(rightEncoder_.totalTicks));
+    encoderMsg.add_data(static_cast<double>(leftTicks));
+    encoderMsg.add_data(static_cast<double>(rightTicks));
 
     encoderPub_->Publish(encoderMsg);
 
-    // Для отладки (можно убрать в релизе)
+    // Для отладки
     static int counter = 0;
     if (counter++ % 1000 == 0)
     {

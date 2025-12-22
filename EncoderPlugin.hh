@@ -1,62 +1,60 @@
 #ifndef ENCODER_PLUGIN_HH
 #define ENCODER_PLUGIN_HH
 
-#include <gz/sim/System.hh>
-#include <gz/sim/Model.hh>
-#include <gz/sim/Joint.hh>
-#include <gz/transport/Node.hh>
 #include <gz/msgs.hh>
 #include <gz/plugin/Register.hh>
+#include <gz/sim/Joint.hh>
+#include <gz/sim/Model.hh>
+#include <gz/sim/System.hh>
+#include <gz/transport/Node.hh>
+
+#define ENCODER_RESOLUTION (10000)
+#define GEAR_FACTOR (2.0f)
 
 namespace gz::sim::systems
 {
-    class EncoderPlugin : public System,
-                          public ISystemConfigure,
-                          public ISystemPreUpdate
+    class EncoderPlugin : public System, public ISystemConfigure, public ISystemPostUpdate
     {
     public:
         EncoderPlugin();
         ~EncoderPlugin() override = default;
 
-        // Конфигурация системы
-        void Configure(const Entity& entity,
-                       const std::shared_ptr<const sdf::Element>& sdf,
-                       EntityComponentManager& ecm,
-                       EventManager& eventMgr) override;
+        void Configure( const Entity                              &entity,
+                        const std::shared_ptr<const sdf::Element> &sdf,
+                        EntityComponentManager                    &ecm,
+                        EventManager                              &eventMgr) override;
 
-        // Предварительное обновление системы
-        void PreUpdate(const UpdateInfo& info,
-                       EntityComponentManager& ecm) override;
+
+        void PostUpdate(const UpdateInfo &info, EntityComponentManager &ecm) ;
+        void PostUpdate(const UpdateInfo &info, const EntityComponentManager &ecm) override;
 
     private:
-        // Структура для хранения данных энкодера
+
         struct EncoderData
         {
-            Entity jointEntity;
+            Entity      jointEntity;
             std::string jointName;
-            double lastPosition{0.0};
-            int64_t totalTicks{0};
-            int64_t ticksPerRevolution{20000};
+            double      lastPosition {0.0};
+            int64_t     totalTicks {0};
+            int64_t     ticksPerRevolution {ENCODER_RESOLUTION * ((int)GEAR_FACTOR)};
         };
 
-        EncoderData leftEncoder_;
-        EncoderData rightEncoder_;
+        EncoderData m_leftEncoder;
+        EncoderData m_rightEncoder;
 
-        gz::transport::Node node_;
-        std::unique_ptr<gz::transport::Node::Publisher> encoderPub_;
-        std::string topic_{"/encoder_data"};
+        gz::transport::Node                             m_node;
+        std::unique_ptr<gz::transport::Node::Publisher> m_encoderPub;
+        std::string                                     m_topic {"/encoder_data"};
 
-        Model model_;
-        bool initialized_{false};
+        Model m_model;
+        bool  m_initialized {false};
     };
-}
-
-
+} // namespace gz::sim::systems
 
 GZ_ADD_PLUGIN(
     gz::sim::systems::EncoderPlugin,
     gz::sim::System,
     gz::sim::systems::EncoderPlugin::ISystemConfigure,
-    gz::sim::systems::EncoderPlugin::ISystemPreUpdate)
+    gz::sim::systems::EncoderPlugin::ISystemPostUpdate)
 
 #endif

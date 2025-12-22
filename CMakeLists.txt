@@ -85,6 +85,19 @@ target_compile_options(encoder_plugin
         -fvisibility=default
 )
 
+find_program(CLANG_FORMAT_EXE NAMES clang-format clang-format-15 clang-format-14 clang-format-13)
+if(CLANG_FORMAT_EXE)
+    message(STATUS "Found clang-format for ${PROJECT_NAME}: ${CLANG_FORMAT_EXE}")
+
+    add_custom_target(${PROJECT_NAME}_format
+            COMMAND ${CLANG_FORMAT_EXE} -i --style=file ${SOURCE_FILES} ${HEADER_FILES}
+            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+            COMMENT "Formatting source files with clang-format"
+    )
+else()
+    message(WARNING "Could not locate clang-format for ${PROJECT_NAME} - formatting target will not be available")
+endif()
+
 # Установка плагина
 install(TARGETS encoder_plugin
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
